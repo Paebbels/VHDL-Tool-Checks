@@ -7,6 +7,8 @@ end entity;
 
 
 architecture test of Ranges is
+	type int32 is range -2147483647 to 2147483647;
+	
 	type freq is range natural'low to natural'high units
 		Hz;
 		kHz = 1000 Hz;
@@ -36,7 +38,10 @@ begin
 	assert natural'high  >=  2147483647    report "FAILED: natural'high  >=  2147483647   ; natural'high  = " & natural'image(natural'high)   ; -- & " / " & to_image(natural'high);
 	assert positive'low   =           1    report "FAILED: positive'low   =           1   ; positive'low  = " & positive'image(positive'low)  ; -- & " / " & to_image(positive'low);
 	assert positive'high >=  2147483647    report "FAILED: positive'high >=  2147483647   ; positive'high = " & positive'image(positive'high) ; -- & " / " & to_image(positive'high);
-																																																 
+
+	assert int32'low     <= -2147483647    report "FAILED: int32'low     <= -2147483647   ; int32'low     = " & int32'image(int32'low)    ; -- & " / " & to_image(int32'low);
+	assert int32'high    >=  2147483647    report "FAILED: int32'high    >=  2147483647   ; int32'high    = " & int32'image(int32'high)   ; -- & " / " & to_image(int32'high);
+
 	assert time'low      <= -2.56204778 hr report "FAILED: time'low      <= -2.56204778 hr; time'low      = " & time'image(time'low)  ; -- & " / " & to_image(time'low);
 	assert time'high     >=  2.56204778 hr report "FAILED: time'high     >=  2.56204778 hr; time'high     = " & time'image(time'high) ; -- & " / " & to_
 

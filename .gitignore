@@ -1,10 +1,4 @@
-/ip/*/**/*.*
-!/ip/*/*.xci
-!/ip/*/sim/*.vhd*
-!/ip/*/synth/*.vhd*
-
-
-/project/*/**/*
-!/project/*/*.xpr
+/Vivado/*/*/**/*
+!/Vivado/*/*/*.xpr
 
 /temp
