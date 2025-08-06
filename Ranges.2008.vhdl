@@ -48,7 +48,7 @@ begin
 	assert freq'low       =           0 Hz report "FAILED: freq'low      <=           0 Hz; freq'low      = " & freq'image(freq'low)  ; -- & " / " & to_image(freq'low);
 	assert freq'high      =  2147483647 Hz report "FAILED: freq'high     >=  2147483647 Hz; freq'high     = " & freq'image(freq'high) ; -- & " / " & to_image(freq'high);
 	
-	assert freq_5Hz_unit = "Hz"            report "FAILED: Unit of '5 Hz' is 'Hz'; Unit = " & freq_5Hz_unit;
+	assert freq_5Hz_unit = "hz"            report "FAILED: Unit of '5 Hz' is 'hz'; Unit = " & freq_5Hz_unit;
 	assert not contains(freq_5Hz, '.')     report "FAILED: Physical type is an integer number";
 
 	LED <= not LED when rising_edge(Clock);
